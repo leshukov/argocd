@@ -21,8 +21,8 @@ spec:
   revisionHistoryLimit: 3
   strategy:
     canary:
-      canaryService: canary-svc  # required
-      stableService: stable-svc  # required
+      canaryService: guestbook-ui-canary  # required
+      stableService: guestbook-ui-primary  # required
       trafficRouting:
         istio:
           virtualService:
