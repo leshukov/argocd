@@ -16,8 +16,8 @@ spec:
         image: gcr.io/heptio-images/ks-guestbook-demo:0.2
         resources:
           requests:
-            cpu: 150m
-            memory: 150Mi
+            cpu: 100m
+            memory: 100Mi
           limits:
             cpu: 200m
             memory: 200Mi
