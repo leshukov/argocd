@@ -6,6 +6,7 @@ spec:
   selector:
     matchLabels:
       app: guestbook-ui
+  replicas: 0
   template:
     metadata:
       labels:
