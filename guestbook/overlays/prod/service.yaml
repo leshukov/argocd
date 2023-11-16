@@ -1,7 +1,19 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: guestbook-ui
+  name: guestbook-ui-primary
+spec:
+  $patch: replace
+  ports:
+  - port: 9081
+    targetPort: 80
+  selector:
+    app: guestbook-ui
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: guestbook-ui-canary
 spec:
   $patch: replace
   ports:

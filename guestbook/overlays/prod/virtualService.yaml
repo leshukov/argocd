@@ -1,18 +1,19 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
+$patch: replace
 metadata:
   name: guestbook-ui
 spec:
-  hosts:
-  - "*"
   gateways:
   - guestbook-ui-gateway
+  hosts:
+  - "*"
   http:
-  - match:
-    - uri:
-        exact: /
+  - name: primary        # referenced in canary.trafficRouting.istio.virtualService.routes
     route:
     - destination:
-        host: guestbook-ui
-        port:
-          number: 9081
+        host: guestbook-ui-primary # referenced in canary.stableService
+      weight: 100
+    - destination:
+        host: guestbook-ui-canary # referenced in canary.canaryService
+      weight: 0

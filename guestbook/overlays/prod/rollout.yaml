@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: guestbook-ui-prod-rollout
 spec:
-  replicas: 6
+  replicas: 3
   selector:
     matchLabels:
       app: guestbook-ui
@@ -20,12 +20,20 @@ spec:
   minReadySeconds: 30
   revisionHistoryLimit: 3
   strategy:
-    canary: #Indicates that the rollout should use the Canary strategy
-      maxSurge: "25%"
-      maxUnavailable: 0
+    canary:
+      canaryService: canary-svc  # required
+      stableService: stable-svc  # required
+      trafficRouting:
+        istio:
+          virtualService:
+            name: guestbook-ui   # required
+            routes:
+            - primary
+          destinationRule:
+            name: guestbook-ui-prod-rollout-destrule    # required
+            canarySubsetName: canary  # required
+            stableSubsetName: stable  # required            # optional if there is a single route in VirtualService, required otherwise
       steps:
-      - setWeight: 10
+      - setWeight: 5
       - pause:
-          duration: 1m # 1 hour
-      - setWeight: 20
-      - pause: {} # pause indefinitely
+          duration: 10m
