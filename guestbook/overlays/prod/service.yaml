@@ -3,9 +3,8 @@ kind: Service
 metadata:
   name: guestbook-ui
 spec:
+  $patch: replace
   ports:
-  - port: 9080
-    $patch: delete
   - port: 9081
     targetPort: 80
   selector:
