@@ -11,6 +11,7 @@ spec:
     metadata:
       labels:
         app: guestbook-ui
+        env: prod
     spec:
       containers:
       - name: guestbook-ui
