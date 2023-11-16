@@ -5,6 +5,7 @@ resources:
   - rollout.yaml
   - virtualService.yaml
   - service.yaml
+  - destinationRule.yaml
 namespace: prod
 labels:
   - includeSelectors: true
