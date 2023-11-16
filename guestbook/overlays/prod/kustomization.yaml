@@ -10,6 +10,8 @@ labels:
       env: prod
 patches:
   - path: deployment.yaml
+  - path: service.yaml
+  - path: virtualService.yaml
 images:
   - name: gcr.io/heptio-images/ks-guestbook-demo
     newTag: "0.1"
