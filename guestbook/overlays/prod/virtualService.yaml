@@ -11,8 +11,8 @@ spec:
   - name: primary        # referenced in canary.trafficRouting.istio.virtualService.routes
     route:
     - destination:
-        host: guestbook-ui-primary # referenced in canary.stableService
+        host: guestbook-ui # referenced in canary.stableService
       weight: 100
     - destination:
-        host: guestbook-ui-canary # referenced in canary.canaryService
+        host: guestbook-ui # referenced in canary.canaryService
       weight: 0
