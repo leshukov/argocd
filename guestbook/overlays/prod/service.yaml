@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: guestbook-ui-primary
 spec:
-  $patch: replace
   ports:
   - port: 9081
     targetPort: 80
@@ -15,7 +14,6 @@ kind: Service
 metadata:
   name: guestbook-ui-canary
 spec:
-  $patch: replace
   ports:
   - port: 9081
     targetPort: 80
