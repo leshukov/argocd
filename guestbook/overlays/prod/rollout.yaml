@@ -27,7 +27,7 @@ spec:
       trafficRouting:
         istio:
           virtualService:
-            name: guestbook-ui   # required
+            name: guestbook-ui-prod-rollout   # required
             routes:
             - primary
           destinationRule:
