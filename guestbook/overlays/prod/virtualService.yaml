@@ -14,12 +14,12 @@ spec:
         subset: stable
         host: guestbook-ui # referenced in canary.stableService
         port: 
-          number: 9081
+          number: 8081
       weight: 100
     - destination:
         subset: canary
         host: guestbook-ui # referenced in canary.canaryService
         port:
-          number: 9081
+          number: 8081
       weight: 0
     
