@@ -6,7 +6,7 @@ spec:
   gateways:
   - guestbook-ui-gateway
   hosts:
-  - "*"
+  - guestbook-ui.prod.svc.cluster.local
   http:
   - name: primary        # referenced in canary.trafficRouting.istio.virtualService.routes
     route:
