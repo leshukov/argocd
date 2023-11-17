@@ -13,9 +13,13 @@ spec:
     - destination:
         subset: stable
         host: guestbook-ui # referenced in canary.stableService
+        port:
+          number: 8000
       weight: 100
     - destination:
         subset: canary
         host: guestbook-ui # referenced in canary.canaryService
+        port:
+          number: 8000
       weight: 0
     
