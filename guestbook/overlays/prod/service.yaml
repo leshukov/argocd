@@ -4,7 +4,8 @@ metadata:
   name: guestbook-ui
 spec:
   ports:
-  - port: 9081
+  - name: guestbook-ui-http
+    port: 9081
     targetPort: 80
   selector:
     app: guestbook-ui-prod-rollout
