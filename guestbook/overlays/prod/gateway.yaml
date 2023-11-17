@@ -5,10 +5,10 @@ metadata:
   namespace: prod
 spec:
   selector:
-    app: guestbook-ui
+    app: guestbook-ui-prod-rollout
   servers:
   - port:
-      number: 8081
+      number: 80
       name: http
       protocol: HTTP
     hosts:
