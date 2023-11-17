@@ -12,9 +12,9 @@ spec:
     route:
     - destination:
         subset: stable
-        host: guestbook-ui-prod-rollout.prod.svc.cluster.local # referenced in canary.stableService
+        host: guestbook-ui-primary # referenced in canary.stableService
       weight: 100
     - destination:
         subset: canary
-        host: guestbook-ui-prod-rollout.prod.svc.cluster.local # referenced in canary.canaryService
+        host: guestbook-ui-canary # referenced in canary.canaryService
       weight: 0
