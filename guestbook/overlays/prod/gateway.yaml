@@ -12,5 +12,4 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-      - guestbook-ui-primary.prod.svc.cluster.local
-      - guestbook-ui-canary.prod.svc.cluster.local
+      - guestbook-ui.prod.svc.cluster.local

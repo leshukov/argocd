@@ -22,12 +22,10 @@ spec:
   revisionHistoryLimit: 3
   strategy:
     canary:
-      canaryService: guestbook-ui-canary  # required
-      stableService: guestbook-ui-primary  # required
       trafficRouting:
         istio:
           virtualService:
-            name: guestbook-ui-prod-rollout   # required
+            name: guestbook-ui   # required
             routes:
             - primary
           destinationRule:
