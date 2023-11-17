@@ -12,4 +12,5 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-      - guestbook-ui-prod-rollout.prod.cluster.local
+      - guestbook-ui-primary
+      - guestbook-ui-canary
