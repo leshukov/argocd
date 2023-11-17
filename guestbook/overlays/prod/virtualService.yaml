@@ -8,7 +8,10 @@ spec:
   hosts:
   - "*"
   http:
-  - name: primary        # referenced in canary.trafficRouting.istio.virtualService.routes
+  - name: primary
+    match:
+      - uri: 
+          prefix: /        
     route:
     - destination:
         subset: stable
