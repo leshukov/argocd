@@ -7,7 +7,7 @@ spec:
   - port: 9081
     targetPort: 80
   selector:
-    app: guestbook-ui
+    app: guestbook-ui-prod-rollout
 ---
 apiVersion: v1
 kind: Service
@@ -18,4 +18,4 @@ spec:
   - port: 9081
     targetPort: 80
   selector:
-    app: guestbook-ui
+    app: guestbook-ui-prod-rollout
