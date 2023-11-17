@@ -6,6 +6,7 @@ resources:
   - virtualService.yaml
   - service.yaml
   - destinationRule.yaml
+  - gateway.yaml
 namespace: prod
 labels:
   - includeSelectors: true

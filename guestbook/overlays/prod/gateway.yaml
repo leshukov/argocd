@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: guestbook-ui-gateway
+  namespace: prod
+spec:
+  selector:
+    app: guestbook-ui
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+      - guestbook-ui.prod.svc.cluster.local
