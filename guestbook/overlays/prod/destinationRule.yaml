@@ -3,7 +3,7 @@ kind: DestinationRule
 metadata:
   name: guestbook-ui-prod-rollout-destrule
 spec:
-  host: guestbook-ui-prod-rollout.prod.svc.cluster.local
+  host: guestbook-ui-primary
   subsets:
   - name: canary   # referenced in canary.trafficRouting.istio.destinationRule.canarySubsetName
     labels:        # labels will be injected with canary rollouts-pod-template-hash value

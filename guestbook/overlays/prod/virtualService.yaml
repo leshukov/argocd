@@ -16,5 +16,5 @@ spec:
       weight: 100
     - destination:
         subset: canary
-        host: guestbook-ui-canary # referenced in canary.canaryService
+        host: guestbook-ui-primary # referenced in canary.canaryService
       weight: 0
