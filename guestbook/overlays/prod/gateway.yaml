@@ -8,7 +8,7 @@ spec:
     app: guestbook-ui-prod-rollout
   servers:
   - port:
-      number: 8000
+      number: 9080
       name: http
       protocol: HTTP
     hosts:
