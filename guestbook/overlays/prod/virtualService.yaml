@@ -16,13 +16,11 @@ spec:
     - destination:
         host: guestbook-ui-primary # referenced in canary.stableService
         port:
-          number: 9080
-          destinationPort: 80
+          number: 80
       weight: 100
     - destination:
         host: guestbook-ui-canary # referenced in canary.canaryService
         port:
-          number: 9080
-          destinationPort: 80
+          number: 80
       weight: 0
     

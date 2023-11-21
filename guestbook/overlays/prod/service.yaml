@@ -5,8 +5,7 @@ metadata:
 spec:
   ports:
   - name: http-guestbook-ui
-    port: 9080
-    targetPort: 80
+    port: 80
   selector:
     app: guestbook-ui-prod-rollout
 ---
@@ -17,7 +16,6 @@ metadata:
 spec:
   ports:
   - name: http-guestbook-ui
-    port: 9080
-    targetPort: 80
+    port: 80
   selector:
     app: guestbook-ui-prod-rollout
