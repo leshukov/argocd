@@ -22,16 +22,14 @@ spec:
   revisionHistoryLimit: 3
   strategy:
     canary:
+      canaryService: guestbook-ui-canary  # required
+      stableService: guestbook-ui-primary  # required
       trafficRouting:
         istio:
           virtualService:
             name: guestbook-ui   # required
             routes:
             - primary
-          destinationRule:
-            name: guestbook-ui-prod-rollout-destrule    # required
-            canarySubsetName: canary  # required
-            stableSubsetName: stable  # required            # optional if there is a single route in VirtualService, required otherwise
       steps:
       - setWeight: 25
       - pause:

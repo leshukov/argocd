@@ -14,15 +14,15 @@ spec:
           prefix: /        
     route:
     - destination:
-        subset: stable
-        host: guestbook-ui # referenced in canary.stableService
+        host: guestbook-ui-primary # referenced in canary.stableService
         port:
-          number: 9080
+          number: 8000
+          destinationPort: 9080
       weight: 100
     - destination:
-        subset: canary
-        host: guestbook-ui # referenced in canary.canaryService
+        host: guestbook-ui-canary # referenced in canary.canaryService
         port:
-          number: 9080
+          number: 8000
+          destinationPort: 9080
       weight: 0
     
