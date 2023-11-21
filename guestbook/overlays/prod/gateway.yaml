@@ -5,7 +5,7 @@ metadata:
   namespace: prod
 spec:
   selector:
-    app: guestbook-ui-prod-rollout
+    istio: ingressgateway
   servers:
   - port:
       number: 9080
