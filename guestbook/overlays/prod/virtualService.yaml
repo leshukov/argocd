@@ -11,7 +11,7 @@ spec:
   - name: primary
     match:
       - uri: 
-          prefix: /        
+          exact: /      
     route:
     - destination:
         host: guestbook-ui-primary # referenced in canary.stableService
