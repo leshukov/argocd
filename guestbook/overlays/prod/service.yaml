@@ -13,10 +13,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: guestbook-ui
+  name: guestbook-ui-canary
 spec:
   ports:
-  - name: http-guestbook-ui-canary
+  - name: http-guestbook-ui
     port: 9080
     targetPort: 80
   selector:
